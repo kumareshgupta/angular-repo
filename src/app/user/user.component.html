@@ -1,0 +1,24 @@
+<p>user works!</p>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)"  >
+    Name : <input type="text" id="name" name="name" [(ngModel)]="data.name"  >
+    Email : <input type="text" id="email" name="email" [(ngModel)]="data.email">
+    Location : <input type="text" id="location" name="location" [(ngModel)]="data.location" >
+    <button type="submit" >Submit</button>
+
+</form>
+
+{{data.name}}
+
+
+
+
+
+
+<div *ngIf="isDisplay">
+    This will be visible if isDisplay is true
+    <ul>
+        <li *ngFor="let city of cities">{{city}}</li>
+    </ul>
+
+</div>
